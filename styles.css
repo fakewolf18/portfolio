@@ -1,0 +1,296 @@
+/* Importing the tech font */
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+html {
+    scroll-padding-top: 80px; 
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    flex-wrap: wrap;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 10px;
+}
+
+header nav ul li a:hover {
+    color: #00bcd4;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00bcd4;
+    margin-right: 20px;
+}
+
+header .logo span {
+    color: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.photo-container {
+    width: 250px;
+    height: 250px;
+    border: 5px solid #00bcd4;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+.photo-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.8);
+}
+
+.photo-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.typing-animation {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #00bcd4;
+    animation: typing 3s steps(14), blink 1s infinite;
+    max-width: 100%;
+    color: #00bcd4;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 14ch;
+    }
+}
+
+@keyframes blink {
+    10% {
+        border-color: transparent;
+    }
+}
+
+/* Sections */
+section {
+    padding: 20px 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: #00bcd4;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    color: #00bcd4;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.8);
+}
+
+.project-card a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project-card a.btn:hover {
+    background-color: #018e9f;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #018e9f;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .photo-container {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Certifications Section */
+#certifications {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    color: #ffffff;
+}
+
+#certifications h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: #00bcd4;
+}
+
+#certifications label {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+select {
+    padding: 10px;
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    max-width: 300px;
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    background-color: #222;
+    color: #ffffff;
+    border: 1px solid #00bcd4;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    font-family: 'Roboto Mono', monospace;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #018e9f;
+}
+
+.certificate-info {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: none;
+}
+
+.certificate-info h3 {
+    color: #00bcd4;
+}
+
+.certificate-info p {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #certifications {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+    
+    select {
+        width: 100%;
+    }
+}

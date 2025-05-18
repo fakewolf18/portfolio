@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshavardhan K K</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="logo">Harshavardhan K K<span>.</span></div>
+        <nav>
+            <ul>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>        
+    </header>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <div class="photo-container">
+                    <img src="myphoto.JPG" alt="Your Photo">
+                </div>
+                <div class="hero-text">
+                    <h1>Harshavardhan K K</h1>
+                    <h1>I am a</h1> 
+                    <h1><span class="typing-animation">Cloud Engineer</span></h1>
+                    <p>Driven by passion, building the future of cloud innovation—one solution at a time.</p>
+                </div>                
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm a 3rd-year B.Tech Information Technology student at Rajalakshmi Engineering College with a strong passion for cloud computing. My goal is to excel in designing and managing scalable, efficient cloud solutions. Alongside this, I have a keen interest in networking, which complements my aspirations in the cloud domain.</p>
+            <br>    
+            <a href="resume.pdf" target="_blank" class="btn">View Resume</a>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>AWS Web Hosting</h3>
+                    <p>This website you are currently on is hosted on an AWS EC2 Instance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Programming Languages: Python, C, Java, HTML, CSS, JavaScript</li>
+                <li>Skills: AWS Solutions, Networking, Web Hosting, Linux, Database Management</li>
+                <li>Certifications: Oracle MySQL, AWS SAA C03 (Udemy)</li>
+                <br>
+                <!-- <a href="cert.html" target="_blank" class="btn">View Certificates</a> -->
+            </ul>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <p>Select a certificate from the dropdown below to view or download the PDF.</p>
+            
+            <!-- Certificate Selection -->
+            <label for="certificateSelect">Choose a Certification:</label>
+            <select id="certificateSelect">
+                <option value="" selected disabled>Select your certificate</option>
+                <option value="oracle">Oracle Database Programming with SQL</option>
+                <option value="aws">ICT Academy AWS Cloud SAA Training</option>
+                <option value="cisco">Cisco Networking Foundations: Fundamentals of Cisco Networking</option>
+                <option value="lan">Networking Foundations: LANs</option>
+            </select>
+            
+            <button onclick="retrieveCertificatePDF()">View/Download Certificate</button>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to drop a message. I'll get back to you soon!</p>
+            <br>
+            <a href="http://linkedin.harshavardhankk.in" target="_blank" class="btn">Or here's my LinkedIn</a>
+            <br><br>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfBuhZAd04AzLwXIxaVo06ARn_Sw7scVJZYeM4stbZO77cZ_w/viewform?embedded=true" width="100%" height="1000vh" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </section>        
+    </main>
+    <footer>
+        <p>&copy; 2024 Harshavardhan K K. All rights reserved.</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
