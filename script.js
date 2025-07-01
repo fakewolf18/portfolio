@@ -1,17 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Smooth scroll for navigation links
-    const navLinks = document.querySelectorAll(".nav-link");
-    navLinks.forEach((link) => {
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
-            const targetId = e.target.getAttribute("href").substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: "smooth" });
-            }
-        });
-    });
-});
+
+function closeWarning() {
+    const warningBox = document.getElementById('warning-box');
+    if (warningBox) {
+        warningBox.classList.add('hidden');
+        setTimeout(() => {
+            warningBox.style.display = 'none';
+        }, 500);
+    }
+}
+
 
 function retrieveCertificatePDF() {
     var selectedCertificate = document.getElementById('certificateSelect').value;
@@ -19,28 +16,28 @@ function retrieveCertificatePDF() {
     if (selectedCertificate) {
         var pdfUrl = '';
 
-        // Assign PDF URL based on selected certificate
         switch (selectedCertificate) {
             case 'oracle':
-                pdfUrl = 'C:/Users/Harshavardhan/Documents/College/portfolio/certificates/dbmssql.pdf';  // Replace with actual path to your PDF
+                pdfUrl = 'cert/dbmssql.pdf';
                 break;
             case 'aws':
-                pdfUrl = 'C:/Users/Harshavardhan/Documents/College/portfolio/certificates/awsict.pdf';  // Replace with actual path to your PDF
+                pdfUrl = 'cert/awsict.pdf'; 
                 break;
             case 'cisco':
-                pdfUrl = 'C:/Users/Harshavardhan/Documents/College/portfolio/certificates/linkedinlearning.pdf';  // Replace with actual path to your PDF
+                pdfUrl = 'cert/linkedinlearning.pdf';
                 break;
             case 'lan':
-                pdfUrl = 'C:/Users/Harshavardhan/Documents/College/portfolio/certificates/netlans.pdf';  // Replace with actual path to your PDF
+                pdfUrl = 'cert/netlans.pdf';
                 break;
             default:
                 alert("No certificate selected.");
                 return;
         }
 
-        // Open the PDF in a new tab
+
         window.open(pdfUrl, '_blank');
     } else {
         alert("Please select a certificate.");
     }
 }
+

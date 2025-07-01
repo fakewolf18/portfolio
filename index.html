@@ -5,27 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harshavardhan K K</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preload" as="image" href="myphoto.JPG" type="image">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <div class="logo">Harshavardhan K K<span>.</span></div>
+	    <div class="logo">Harshavardhan K K<span>.</span></div>
         <nav>
             <ul>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+		<li><a href="#certifications" class="nav-link">Certifications</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>        
     </header>
+    <div class="warning" id="warning-box">
+        <p><strong>Work In Progress</strong></p>
+        <p> This website will always be a work in progress. The info here is not final.</p>
+    <button class="close-warning" onclick="closeWarning()">×</button>
+    </div>
     <main>
         <section id="hero">
             <div class="hero-content">
                 <div class="photo-container">
-                    <img src="myphoto.JPG" alt="Your Photo">
+                    <img src="myphoto.JPG" alt="My Photo">
                 </div>
                 <div class="hero-text">
                     <h1>Harshavardhan K K</h1>
@@ -47,8 +53,12 @@
             <h2>Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <h3>AWS Web Hosting</h3>
-                    <p>This website you are currently on is hosted on an AWS EC2 Instance.</p>
+                    <h3>Web Hosting</h3>
+                    <p>This website you are currently on is delivered to you using AWS CloudFront CDN. The website is routed through Cloudflare nameservers and secured by Amazon ACM.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Home Media Server</h3>
+                    <p>Set-up a local media server on my old laptop running Fedora using Tailscale and Jellyfin to access photos, videos and files from anywhere. I use it as my personal 'cloud' service.</p>
                 </div>
             </div>
         </section>
@@ -56,15 +66,15 @@
         <section id="skills">
             <h2>Skills</h2>
             <ul class="skills-list">
-                <li>Programming Languages: Python, C, Java, HTML, CSS, JavaScript</li>
+                <li>Programming Languages: Python, C, HTML, CSS</li>
                 <li>Skills: AWS Solutions, Networking, Web Hosting, Linux, Database Management</li>
-                <li>Certifications: Oracle MySQL, AWS SAA C03 (Udemy)</li>
+                <li>Certifications: Oracle MySQL, ICT Academy AWS Cloud SAA Training</li>
                 <br>
-                <!-- <a href="cert.html" target="_blank" class="btn">View Certificates</a> -->
+		<!-- <a href="certificategdrivelink" target="_blank" class="btn">View Certificates</a> -->
             </ul>
         </section>
 
-        <section id="certifications">
+	<section id="certifications">
             <h2>Certifications</h2>
             <p>Select a certificate from the dropdown below to view or download the PDF.</p>
             
@@ -81,18 +91,19 @@
             <button onclick="retrieveCertificatePDF()">View/Download Certificate</button>
         </section>
 
-        <section id="contact">
+	<section id="contact">
             <h2>Contact Me</h2>
             <p>Feel free to drop a message. I'll get back to you soon!</p>
             <br>
-            <a href="http://linkedin.harshavardhankk.in" target="_blank" class="btn">Or here's my LinkedIn</a>
+            <a href="http://linkedin.com/in/harshavardhan-k-k" target="_blank" class="btn">Or here's my LinkedIn</a>
             <br><br>
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfBuhZAd04AzLwXIxaVo06ARn_Sw7scVJZYeM4stbZO77cZ_w/viewform?embedded=true" width="100%" height="1000vh" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </section>        
     </main>
     <footer>
-        <p>&copy; 2024 Harshavardhan K K. All rights reserved.</p>
+        <p>&copy; 2025 Harshavardhan K K. All rights reserved.</p>
     </footer>
     <script src="script.js" defer></script>
 </body>
 </html>
+

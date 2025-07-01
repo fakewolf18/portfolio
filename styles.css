@@ -8,7 +8,8 @@ body {
 }
 
 html {
-    scroll-padding-top: 80px; 
+	scroll-behavior: smooth;
+    	scroll-padding-top: 80px; 
 }
 
 /* Header */
@@ -64,6 +65,36 @@ header .logo span {
 html {
     scroll-behavior: smooth;
 }
+
+/* Warning section */
+
+.warning {
+    position: fixed;
+    bottom: 10px; /* Place it below the header */
+    right: 10px;
+    background-color: #9c2b2e; /* Bright warning color */
+    color: #d2cece;
+    padding: 4px 6px;
+    border: solid #e84e4f;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100; /* Ensure it stays above other elements */
+    font-size: 0.9rem;
+    font-weight: bold;
+    min-width: 150px;
+    max-width: 250px; /* Reduce the width */
+    word-wrap: break-word; /* Ensure long text breaks into lines */
+    text-align: center; /* Center the text */
+}
+
+strong{
+    font-size: 1rem;
+}
+
+.sticky-warning p {
+    margin: 0;
+}
+
 
 /* Hero Section */
 #hero {
@@ -139,16 +170,12 @@ h2 {
 }
 
 /* Project Grid */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
 .project-card {
     background-color: #222;
     padding: 20px;
     border-radius: 10px;
+    margin: 20px;
+    margin-bottom: 40px;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -162,7 +189,7 @@ h2 {
     box-shadow: 0 0 30px rgba(0, 188, 212, 0.8);
 }
 
-.project-card a.btn {
+/* .project-card a.btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #00bcd4;
@@ -173,7 +200,7 @@ h2 {
 
 .project-card a.btn:hover {
     background-color: #018e9f;
-}
+} */
 
 /* Buttons */
 .btn {
@@ -181,7 +208,6 @@ h2 {
     background-color: #00bcd4;
     color: #ffffff;
     text-decoration: none;
-    font-family: 'Roboto Mono', monospace;
     border-radius: 5px;
 }
 
@@ -195,6 +221,53 @@ footer {
     padding: 20px;
     background-color: #1a1a1a;
     color: #777;
+}
+
+.warning.hidden {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.close-warning {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close-warning:hover {
+    color: #e84e4f;
+}
+
+
+.close-warning {
+    background-color: rgba(255, 255, 255, 0.1); /* Lighter shade of the background */
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.close-warning:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly brighter on hover */
+    color: #e84e4f;
 }
 
 /* Responsive Design */
@@ -212,12 +285,7 @@ footer {
         width: 200px;
         height: 200px;
     }
-}
 
-@media (min-width: 1200px) {
-    .project-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 /* Certifications Section */
@@ -242,7 +310,7 @@ footer {
 select {
     padding: 10px;
     font-size: 1rem;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Mono', 'monospace';
     max-width: 300px;
     margin-top: 20px;
     margin-right: 30px;
@@ -289,8 +357,9 @@ button:hover {
         flex-direction: column;
         padding: 20px 10px;
     }
-    
+
     select {
         width: 100%;
     }
 }
+
